@@ -66,7 +66,9 @@ function main() {
   startTicker();
   const app = createApp();
   app.listen(config.port, () => {
-    console.log(`Finvara API on http://localhost:${config.port}  ·  AI: ${isLive() ? "live (Claude)" : "offline demo mode (set ANTHROPIC_API_KEY)"}`);
+    const hasApp = fs.existsSync(path.join(config.webDist, "index.html"));
+    console.log(`\n  Finvara is running → http://localhost:${hasApp ? config.port : 5173}${hasApp ? "" : "  (API on :" + config.port + ")"}`);
+    console.log(`  AI advisors: ${isLive() ? "live (Claude)" : "offline demo mode — add ANTHROPIC_API_KEY to .env for live answers"}\n`);
   });
 }
 

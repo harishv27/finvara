@@ -2,18 +2,17 @@
   "name": "finvara",
   "private": true,
   "version": "1.0.0",
-  "description": "Finvara — personal finance, wealth planning and AI advisory platform",
+  "description": "Personal finance app: budgeting, planning, investing research and AI advisors",
   "workspaces": [
     "server",
     "web"
   ],
   "scripts": {
+    "start": "npm run build && npm run start -w server",
     "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev -w server\" \"npm run dev -w web\"",
-    "build": "npm run build -w web && npm run build -w server",
-    "start": "npm run start -w server",
-    "seed": "npm run seed -w server",
+    "build": "npm run build -w web",
     "test": "npm test -w server",
-    "typecheck": "npm run typecheck -w server && npm run typecheck -w web"
+    "seed": "npm run seed -w server"
   },
   "devDependencies": {
     "concurrently": "^9.2.5"
