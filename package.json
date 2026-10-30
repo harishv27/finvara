@@ -10,7 +10,7 @@
   "scripts": {
     "start": "npm run build && npm run start -w server",
     "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev -w server\" \"npm run dev -w web\"",
-    "build": "npm run build -w web",
+    "build": "npm run build -w web -- --logLevel warn",
     "test": "npm test -w server",
     "seed": "npm run seed -w server"
   },
