@@ -1,5 +1,7 @@
 # Finvara
 
+**Live demo: https://finvara.vercel.app** (demo data resets periodically)
+
 Personal finance in one place: **budgeting, goal & retirement planning, will writing, fund and stock research, and AI advisors.**
 All market data is simulated, so it's a safe sandbox to explore.
 

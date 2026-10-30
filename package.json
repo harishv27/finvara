@@ -2,6 +2,7 @@
   "name": "finvara",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "Personal finance app: budgeting, planning, investing research and AI advisors",
   "workspaces": [
     "server",
